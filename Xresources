@@ -1,0 +1,33 @@
+Xcursor.theme:PearDarkCursors
+! URxvt Configuration
+URxvt.font:                       xft:agave Nerd Font Mono:size=10:style=Medium:autohint=true
+URxvt.geometry:                   80x24
+URxvt.internalBorder:             30
+URxvt.cursorBlink:                true
+URxvt.saveLines:                  10000
+URxvt.scrollBar:                  false
+URxvt.scrollBar_right:            true
+URxvt.scrollBar_floating:         false
+URxvt.scrollstyle:                plain
+URxvt.scrollWithBuffer:           false
+URxvt.urgentOnBell:               false
+URxvt.iso14755:                   false
+URxvt.iso14755_52:                false
+URxvt.pointerBlank:               true
+
+
+ URxvt.letterSpace: -1
+
+
+
+
+! URxvt Extensions
+
+URxvt.perl-ext-common:            default,resize-font,clear
+
+URxvt.keysym.Control-Shift-C:     eval:selection_to_clipboard
+URxvt.keysym.Control-Shift-V:     eval:paste_clipboard
+URxvt.keysym.Control-Up:          eval:scroll_up 1
+URxvt.keysym.Control-Down:        eval:scroll_down 1
+URxvt.keysym.Control-Home:        eval:scroll_to_top
+URxvt.keysym.Control-End:         eval:scroll_to_bottom
