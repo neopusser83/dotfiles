@@ -4,6 +4,11 @@
 
 DIR="$HOME/.config/polybar"
 
+CONFIG="config.2.ini"
+
+#RES=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
+RES=1366
+
 # Terminate already running bar instances
 killall -q polybar
 
@@ -11,15 +16,13 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the bar
-polybar -q main1 -c "$DIR"/config.ini &
-polybar -q main2 -c "$DIR"/config.ini &
-polybar -q main3 -c "$DIR"/config.ini &
-polybar -q main4 -c "$DIR"/config.ini &
-polybar -q main5 -c "$DIR"/config.ini &
-polybar -q main6 -c "$DIR"/config.ini &
-polybar -q main7 -c "$DIR"/config.ini &
-polybar -q main8 -c "$DIR"/config.ini &
-polybar -q main9 -c "$DIR"/config.ini &
-polybar -q main10 -c "$DIR"/config.ini &
-polybar -q main11 -c "$DIR"/config.ini &
-
+if [[ $RES == 1366 ]]
+then
+polybar -q main1 -c "$DIR"/"$CONFIG" &
+polybar -q main2 -c "$DIR"/"$CONFIG" &
+polybar -q main3 -c "$DIR"/"$CONFIG" &
+polybar -q main4 -c "$DIR"/"$CONFIG" &
+polybar -q main5 -c "$DIR"/"$CONFIG" &
+polybar -q main6 -c "$DIR"/"$CONFIG" &
+polybar -q main7 -c "$DIR"/"$CONFIG" &
+fi
